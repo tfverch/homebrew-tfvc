@@ -5,20 +5,20 @@
 class Tfvc < Formula
   desc "tfvc is a tool for checking terraform provider and module versions are up to date"
   homepage "https://github.com/tfverch/tfvc"
-  version "0.7.9"
+  version "0.7.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.9/tfvc_0.7.9_Darwin_arm64.tar.gz"
-      sha256 "37040575cf4e2f0c98672d51ec0fa75bd2e23fb2e7e75b885bcc7d4585a51c43"
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Darwin_arm64.tar.gz"
+      sha256 "47fe493e181db133b3271fe2010658c343b9004943ef4b418f43e08d175233ff"
 
       def install
         bin.install "tfvc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.9/tfvc_0.7.9_Darwin_x86_64.tar.gz"
-      sha256 "7cb6bc7e392e02b15cbb5572bace7fe57af5a1301f111566c42862f5d413ad05"
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Darwin_x86_64.tar.gz"
+      sha256 "95e837f3383a6373484e21dfe8598059e52fd11aa494ef656f7df674f52b6fbb"
 
       def install
         bin.install "tfvc"
@@ -27,17 +27,17 @@ class Tfvc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.9/tfvc_0.7.9_Linux_x86_64.tar.gz"
-      sha256 "b64e439f0251fed89dc38f88864e4eb3e6684bf13066b28f4fd79d7bbc14f595"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Linux_arm64.tar.gz"
+      sha256 "e53bd567cd10c9c858becf5fea5a301ae6d030a4873eb8f2a5aa80241ccb272b"
 
       def install
         bin.install "tfvc"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.9/tfvc_0.7.9_Linux_arm64.tar.gz"
-      sha256 "84129ebaa45fda888001d75c9e931aaac8e1a0ed98f432467737b1e8f5119448"
+    if Hardware::CPU.intel?
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Linux_x86_64.tar.gz"
+      sha256 "79f47940960628e88bc39a5275101857af9c3c0581dfef1e94e711bfd1e4a805"
 
       def install
         bin.install "tfvc"
