@@ -5,20 +5,20 @@
 class Tfvc < Formula
   desc "tfvc is a tool for checking terraform provider and module versions are up to date"
   homepage "https://github.com/tfverch/tfvc"
-  version "0.7.10"
+  version "0.7.11"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Darwin_arm64.tar.gz"
-      sha256 "47fe493e181db133b3271fe2010658c343b9004943ef4b418f43e08d175233ff"
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.11/tfvc_0.7.11_Darwin_arm64.tar.gz"
+      sha256 "9648c0ed1782b7bc6eb7ffe4a251e7ca320c718f9c1308fe5cfb50e2c76bf686"
 
       def install
         bin.install "tfvc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Darwin_x86_64.tar.gz"
-      sha256 "95e837f3383a6373484e21dfe8598059e52fd11aa494ef656f7df674f52b6fbb"
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.11/tfvc_0.7.11_Darwin_x86_64.tar.gz"
+      sha256 "60a00cbb5d27fa73375b845fb6d868d618519917ce722fdfb5f10fbff65a8aeb"
 
       def install
         bin.install "tfvc"
@@ -28,16 +28,16 @@ class Tfvc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Linux_arm64.tar.gz"
-      sha256 "e53bd567cd10c9c858becf5fea5a301ae6d030a4873eb8f2a5aa80241ccb272b"
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.11/tfvc_0.7.11_Linux_arm64.tar.gz"
+      sha256 "3d7afe18c5b908acecc737b13cf144b894bce5600d647eacb333631d56d65e8e"
 
       def install
         bin.install "tfvc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tfverch/tfvc/releases/download/v0.7.10/tfvc_0.7.10_Linux_x86_64.tar.gz"
-      sha256 "79f47940960628e88bc39a5275101857af9c3c0581dfef1e94e711bfd1e4a805"
+      url "https://github.com/tfverch/tfvc/releases/download/v0.7.11/tfvc_0.7.11_Linux_x86_64.tar.gz"
+      sha256 "e9361eaf5e01ddebac3aa1fc35bfbc77539b058177cd573b51104d28fbe4a6c7"
 
       def install
         bin.install "tfvc"
